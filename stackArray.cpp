@@ -24,7 +24,9 @@ bool Stack::push(int x){
       return false;
    }
    else{
+      cout << top << " atas\n";
       a[++top] = x;
+      cout << top << " akhir\n";
       cout << x << " pushed into stack\n";
       return true;
    }
@@ -61,5 +63,21 @@ int main(){
    s.push(10);
    s.push(20);
    s.push(30);
+   s.push(40);
+   s.push(50);
    
+   cout << s.pop() << " Popped from stack\n";
+   
+   //print top element of stack after popping
+   cout << "Top element is : " << s.peek() << endl;
+
+   //print all elements in stack :
+   cout <<"Elements present in stack : ";
+   while(!s.isEmpty())
+   {
+      // print top element in stack
+      cout << s.peek() <<" ";
+      // remove top element in stack
+      s.pop();
+   }
 }
